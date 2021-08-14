@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="employee-rpt" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true">
+    <property name="ireport.zoom" value="1.0"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="0"/>
+    <style name="ColoredField" forecolor="#9a9a9a">
+        <conditionalStyle>
+            <style/>
+        </conditionalStyle>
+    </style>
+    <style name="ColoredGreen" forecolor="#49ba4e">
+        <conditionalStyle>
+            <style/>
+        </conditionalStyle>
+    </style>
+    <style name="ColoredLine" forecolor="#e6e3e3">
+        <conditionalStyle>
+            <style/>
+        </conditionalStyle>
+    </style>
+    <parameter name="productInfoList" class="java.util.List"/>
+    <parameter name="logo" class="java.io.InputStream"/>
+    <parameter name="formTitle" class="java.lang.String"/>
+    <parameter name="customerName" class="java.lang.String"/>
+    <parameter name="merchOrderId" class="java.lang.String"/>
+    <parameter name="transactionDate" class="java.time.LocalDateTime"/>
+    <parameter name="amount" class="java.lang.Integer"/>
+    <parameter name="paymentType" class="java.lang.String"/>
+    <field name="productName" class="java.lang.String"/>
+    <field name="amount" class="java.lang.Double"/>
+    <field name="quantity" class="java.lang.Integer"/>
+    <field name="currency" class="java.lang.String"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="280">
+            <image scaleImage="FillFrame" onErrorType="Blank">
+                <reportElement x="10" y="0" width="60" height="55" backcolor="#333333" uuid="80bcba32-4e50-4a3a-949c-39e7c22ddff4"/>
+                <imageExpression><![CDATA[$P{logo}]]></imageExpression>
+            </image>
+            <textField>
+                <reportElement x="100" y="0" width="408" height="55"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font size="14" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{formTitle}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="10" y="75" width="408" height="35"/>
+                <textElement textAlignment="Left">
+                    <font size="20" isBold="true" isItalic="false"/>
+                </textElement>
+                <text><![CDATA[Thanks for your purchase!]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="10" y="145" width="408" height="30"/>
+                <textElement textAlignment="Left">
+                </textElement>
+                <textFieldExpression><![CDATA["Hi,"+ $P{customerName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="ColoredField" mode="Opaque" x="10" y="175" width="408" height="40"/>
+                <textElement textAlignment="Left"/>
+                <textFieldExpression><![CDATA["Here is the payment information for your order."]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="ColoredField" mode="Opaque" x="10" y="215" width="208" height="30"/>
+                <textElement textAlignment="Left">
+                    <font size="12" isBold="false" isItalic="false"/>
+                </textElement>
+                <text><![CDATA[Order Date]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="ColoredField" mode="Opaque" x="208" y="215" width="200" height="30"/>
+                <textElement textAlignment="Left">
+                    <font size="12" isBold="false" isItalic="false"/>
+                </textElement>
+                <text><![CDATA[Order No]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="ColoredField" mode="Opaque" x="408" y="215" width="200" height="30"/>
+                <textElement textAlignment="Left">
+                    <font size="12" isBold="false" isItalic="false"/>
+                </textElement>
+                <text><![CDATA[Payment Type]]></text>
+            </staticText>
+
+            <textField>
+                <reportElement x="10" y="245" width="208" height="30"/>
+                <textElement textAlignment="Left"/>
+                <textFieldExpression><![CDATA[java.time.format.DateTimeFormatter.ofPattern("dd MMM yyyy HH:mm:ss").format($P{transactionDate})]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="208" y="245" width="200" height="30"/>
+                <textElement textAlignment="Left"/>
+                <textFieldExpression><![CDATA[$P{merchOrderId}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="408" y="245" width="200" height="30"/>
+                <textElement textAlignment="Left"/>
+                <textFieldExpression><![CDATA[$P{paymentType}]]></textFieldExpression>
+            </textField>
+            <line>
+                <reportElement style="ColoredLine" mode="Opaque" x="10" y="275" width="530" height="0"/>
+                <graphicElement stretchType="NoStretch" pen="Thin"/>
+            </line>
+        </band>
+    </title>
+    <columnHeader>
+    </columnHeader>
+    <detail>
+        <band height="50" splitType="Stretch">
+            <textField>
+                <reportElement x="10" y="10" width="208" height="20"/>
+                <textElement textAlignment="Left"/>
+                <textFieldExpression><![CDATA[$F{productName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="458" y="10" width="90" height="20"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0").format(Double.valueOf($F{amount}))+ " MMK"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement style="ColoredField" mode="Opaque" x="10" y="30" width="208" height="20"/>
+                <textElement textAlignment="Left"/>
+                <textFieldExpression><![CDATA["Qty: "+ $F{quantity}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <pageFooter>
+        <band height="20">
+            <staticText>
+                <reportElement style="ColoredField" mode="Opaque" x="0" y="0" width="595" height="20"/>
+                <textElement textAlignment="Center">
+                    <font size="12" isBold="true" isItalic="false"/>
+                </textElement>
+                <text><![CDATA[©2021 Admin. All Right Reserved.]]></text>
+            </staticText>
+        </band>
+    </pageFooter>
+    <summary>
+        <band height="330">
+            <line>
+                <reportElement style="ColoredLine" mode="Opaque" x="10" y="0" width="530" height="0"/>
+                <graphicElement stretchType="NoStretch" pen="Thin"/>
+            </line>
+            <staticText>
+                <reportElement style="ColoredField" x="320" y="30" width="208" height="30"/>
+                <textElement textAlignment="Left">
+                    <font size="12" isBold="false" isItalic="false"/>
+                </textElement>
+                <text><![CDATA[Subtotal]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="458" y="30" width="90" height="20"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0").format(Double.valueOf($P{amount}))+" MMK"]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="ColoredField" x="320" y="50" width="408" height="20"/>
+                <textElement textAlignment="Left">
+                    <font size="12" isBold="false" isItalic="false"/>
+                </textElement>
+                <text><![CDATA[Tax]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="458" y="50" width="90" height="20"/>
+                <textElement textAlignment="Right">
+                </textElement>
+                <text><![CDATA[0 MMK]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="320" y="70" width="408" height="150"/>
+                <textElement textAlignment="Left">
+                    <font size="12" isBold="false" isItalic="false"/>
+                </textElement>
+                <text><![CDATA[Total]]></text>
+            </staticText>
+            <textField>
+                <reportElement style="ColoredGreen" x="458" y="70" width="90" height="150"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0").format(Double.valueOf($P{amount}))+" MMK"]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="10" y="220" width="208" height="20"/>
+                <textElement textAlignment="Left">
+                    <font size="12" isBold="false" isItalic="false"/>
+                </textElement>
+                <text><![CDATA[Thank you for using our service.]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="10" y="240" width="208" height="20"/>
+                <textElement textAlignment="Left">
+                    <font size="12" isBold="false" isItalic="false"/>
+                </textElement>
+                <text><![CDATA[Sincerely yours,]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="10" y="260" width="208" height="70"/>
+                <textElement textAlignment="Left">
+                    <font size="12" isBold="true" isItalic="false"/>
+                </textElement>
+                <text><![CDATA[Admin Team]]></text>
+            </staticText>
+        </band>
+    </summary>
+</jasperReport>

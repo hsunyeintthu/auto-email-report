@@ -1,0 +1,645 @@
+2021-08-14 17:39:40.137  INFO 21736 --- [main] c.h.r.ReportAutoEmailApplicationTests    : Starting ReportAutoEmailApplicationTests using Java 11.0.9 on DESKTOP-J47OLBU with PID 21736 (started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 17:39:40.142  INFO 21736 --- [main] c.h.r.ReportAutoEmailApplicationTests    : No active profile set, falling back to default profiles: default
+2021-08-14 17:39:42.106  INFO 21736 --- [main] c.h.r.ReportAutoEmailApplicationTests    : Started ReportAutoEmailApplicationTests in 2.884 seconds (JVM running for 5.785)
+2021-08-14 19:19:18.086  INFO 5680 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 5680 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 19:19:18.093  INFO 5680 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 19:19:18.694  WARN 5680 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reportServiceImpl' defined in file [D:\JDC\workspace\mmcare\report-auto-email\target\classes\com\hnt\reportautoemail\service\ReportServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'report' defined in file [D:\JDC\workspace\mmcare\report-auto-email\target\classes\com\hnt\reportautoemail\util\Report.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hnt.reportautoemail.util.Report]: No default constructor found; nested exception is java.lang.NoSuchMethodException: com.hnt.reportautoemail.util.Report.<init>()
+2021-08-14 19:19:18.702  INFO 5680 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-08-14 19:19:18.730 ERROR 5680 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reportServiceImpl' defined in file [D:\JDC\workspace\mmcare\report-auto-email\target\classes\com\hnt\reportautoemail\service\ReportServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'report' defined in file [D:\JDC\workspace\mmcare\report-auto-email\target\classes\com\hnt\reportautoemail\util\Report.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hnt.reportautoemail.util.Report]: No default constructor found; nested exception is java.lang.NoSuchMethodException: com.hnt.reportautoemail.util.Report.<init>()
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar:2.5.3]
+	at com.hnt.reportautoemail.ReportAutoEmailApplication.main(ReportAutoEmailApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'report' defined in file [D:\JDC\workspace\mmcare\report-auto-email\target\classes\com\hnt\reportautoemail\util\Report.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hnt.reportautoemail.util.Report]: No default constructor found; nested exception is java.lang.NoSuchMethodException: com.hnt.reportautoemail.util.Report.<init>()
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1316) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 18 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.hnt.reportautoemail.util.Report]: No default constructor found; nested exception is java.lang.NoSuchMethodException: com.hnt.reportautoemail.util.Report.<init>()
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:83) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 30 common frames omitted
+Caused by: java.lang.NoSuchMethodException: com.hnt.reportautoemail.util.Report.<init>()
+	at java.base/java.lang.Class.getConstructor0(Class.java:3349) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2553) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:78) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 31 common frames omitted
+
+2021-08-14 19:34:53.812  INFO 21544 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 21544 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 19:34:53.818  INFO 21544 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 19:34:54.603  INFO 21544 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 1.334 seconds (JVM running for 2.598)
+2021-08-14 19:41:47.027  INFO 23092 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 23092 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 19:41:47.030  INFO 23092 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 19:41:47.645  INFO 23092 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void ReportServiceImpl.sendAutoEmail()
+2021-08-14 19:41:47.652  INFO 23092 --- [main] c.h.r.service.SendEmailServiceImpl       : Running Time=2021-08-14
+2021-08-14 19:41:47.683  INFO 23092 --- [main] c.h.r.service.ReportServiceImpl          : Sending with Attached...
+2021-08-14 19:41:47.715  WARN 23092 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sendEmailServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.mail.MailParseException: Could not parse mail; nested exception is java.io.FileNotFoundException: D:\img\logo.jpg (The system cannot find the path specified)
+2021-08-14 19:41:47.724  INFO 23092 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-08-14 19:41:47.745 ERROR 23092 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sendEmailServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.mail.MailParseException: Could not parse mail; nested exception is java.io.FileNotFoundException: D:\img\logo.jpg (The system cannot find the path specified)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar:2.5.3]
+	at com.hnt.reportautoemail.ReportAutoEmailApplication.main(ReportAutoEmailApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.mail.MailParseException: Could not parse mail; nested exception is java.io.FileNotFoundException: D:\img\logo.jpg (The system cannot find the path specified)
+	at SendEmailService1Impl.sendingMail(ReportServiceImpl.java:107) ~[classes/:na]
+	at ReportServiceImpl.sendAutoEmail(SendEmailServiceImpl.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:725) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 16 common frames omitted
+Caused by: java.io.FileNotFoundException: D:\img\logo.jpg (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method) ~[na:na]
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219) ~[na:na]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157) ~[na:na]
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112) ~[na:na]
+	at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86) ~[na:na]
+	at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184) ~[na:na]
+	at java.base/java.net.URL.openStream(URL.java:1140) ~[na:na]
+	at javax.activation.URLDataSource.getInputStream(URLDataSource.java:90) ~[jakarta.activation-1.2.2.jar:1.2.2]
+	at com.hnt.reportautoemail.service.GeneratePdfServiceImpl.preparePdf(GeneratePdfServiceImpl.java:40) ~[classes/:na]
+	at SendEmailService1Impl.sendingMail(ReportServiceImpl.java:92) ~[classes/:na]
+	... 24 common frames omitted
+
+2021-08-14 19:44:34.685  INFO 20112 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 20112 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 19:44:34.690  INFO 20112 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 19:44:35.317  INFO 20112 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void ReportServiceImpl.sendAutoEmail()
+2021-08-14 19:44:35.326  INFO 20112 --- [main] c.h.r.service.SendEmailServiceImpl       : Running Time=2021-08-14
+2021-08-14 19:44:35.344  INFO 20112 --- [main] c.h.r.service.ReportServiceImpl          : Sending with Attached...
+2021-08-14 19:44:35.945 ERROR 20112 --- [main] c.h.r.service.GeneratePdfServiceImpl     : java.io.FileNotFoundException: \report\receipt.jrxml (The system cannot find the path specified)
+2021-08-14 19:44:35.946 ERROR 20112 --- [main] c.h.r.service.ReportServiceImpl          : Error in generating report
+2021-08-14 19:44:42.235  WARN 20112 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sendEmailServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535 Authentication Credentials Invalid
+
+2021-08-14 19:44:42.244  INFO 20112 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-08-14 19:44:42.268 ERROR 20112 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sendEmailServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535 Authentication Credentials Invalid
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar:2.5.3]
+	at com.hnt.reportautoemail.ReportAutoEmailApplication.main(ReportAutoEmailApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535 Authentication Credentials Invalid
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at SendEmailService1Impl.sendingMail(ReportServiceImpl.java:104) ~[classes/:na]
+	at ReportServiceImpl.sendAutoEmail(SendEmailServiceImpl.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:725) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 16 common frames omitted
+Caused by: javax.mail.AuthenticationFailedException: 535 Authentication Credentials Invalid
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.9.jar:5.3.9]
+	... 27 common frames omitted
+
+2021-08-14 19:45:26.478  INFO 4160 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 4160 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 19:45:26.483  INFO 4160 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 19:45:27.075  INFO 4160 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void ReportServiceImpl.sendAutoEmail()
+2021-08-14 19:45:27.084  INFO 4160 --- [main] c.h.r.service.SendEmailServiceImpl       : Running Time=2021-08-14
+2021-08-14 19:45:27.103  INFO 4160 --- [main] c.h.r.service.ReportServiceImpl          : Sending with Attached...
+2021-08-14 19:45:27.512 ERROR 4160 --- [main] c.h.r.service.GeneratePdfServiceImpl     : java.io.FileNotFoundException: \report\receipt.jrxml (The system cannot find the path specified)
+2021-08-14 19:45:27.513 ERROR 4160 --- [main] c.h.r.service.ReportServiceImpl          : Error in generating report
+2021-08-14 19:45:32.694  WARN 4160 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sendEmailServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535 Authentication Credentials Invalid
+
+2021-08-14 19:45:32.706  INFO 4160 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-08-14 19:45:32.723 ERROR 4160 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sendEmailServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535 Authentication Credentials Invalid
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar:2.5.3]
+	at com.hnt.reportautoemail.ReportAutoEmailApplication.main(ReportAutoEmailApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535 Authentication Credentials Invalid
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at SendEmailService1Impl.sendingMail(ReportServiceImpl.java:104) ~[classes/:na]
+	at ReportServiceImpl.sendAutoEmail(SendEmailServiceImpl.java:44) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:725) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 16 common frames omitted
+Caused by: javax.mail.AuthenticationFailedException: 535 Authentication Credentials Invalid
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.9.jar:5.3.9]
+	... 27 common frames omitted
+
+2021-08-14 19:49:14.993  INFO 14248 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 14248 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 19:49:15.107  INFO 14248 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 19:49:16.045  INFO 14248 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void ReportServiceImpl.sendAutoEmail()
+2021-08-14 19:49:16.059  INFO 14248 --- [main] c.h.r.service.SendEmailServiceImpl       : Running Time=2021-08-14
+2021-08-14 19:49:16.086  INFO 14248 --- [main] c.h.r.service.ReportServiceImpl          : Sending with Attached...
+2021-08-14 19:49:16.982 ERROR 14248 --- [main] c.h.r.service.GeneratePdfServiceImpl     : java.io.FileNotFoundException: \report\receipt.jrxml (The system cannot find the path specified)
+2021-08-14 19:49:16.984 ERROR 14248 --- [main] c.h.r.service.ReportServiceImpl          : Error in generating report
+2021-08-14 19:49:20.161  WARN 14248 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sendEmailServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials fa21sm4683331pjb.20 - gsmtp
+
+2021-08-14 19:49:20.182  INFO 14248 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-08-14 19:49:20.228 ERROR 14248 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sendEmailServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials fa21sm4683331pjb.20 - gsmtp
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar:2.5.3]
+	at com.hnt.reportautoemail.ReportAutoEmailApplication.main(ReportAutoEmailApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials fa21sm4683331pjb.20 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at SendEmailService1Impl.sendingMail(ReportServiceImpl.java:104) ~[classes/:na]
+	at ReportServiceImpl.sendAutoEmail(SendEmailServiceImpl.java:44) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:725) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 16 common frames omitted
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials fa21sm4683331pjb.20 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.9.jar:5.3.9]
+	... 27 common frames omitted
+
+2021-08-14 19:53:25.566  INFO 6336 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 6336 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 19:53:25.571  INFO 6336 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 19:53:26.537  INFO 6336 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void ReportServiceImpl.sendAutoEmail()
+2021-08-14 19:53:26.557  INFO 6336 --- [main] c.h.r.service.SendEmailServiceImpl       : Running Time=2021-08-14
+2021-08-14 19:53:26.603  INFO 6336 --- [main] c.h.r.service.ReportServiceImpl          : Sending with Attached...
+2021-08-14 19:53:27.481 ERROR 6336 --- [main] c.h.r.service.GeneratePdfServiceImpl     : java.io.FileNotFoundException: \report\receipt.jrxml (The system cannot find the path specified)
+2021-08-14 19:53:27.483 ERROR 6336 --- [main] c.h.r.service.ReportServiceImpl          : Error in generating report
+2021-08-14 19:53:30.451  WARN 6336 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sendEmailServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 66sm5766848pfu.67 - gsmtp
+
+2021-08-14 19:53:30.466  INFO 6336 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-08-14 19:53:30.512 ERROR 6336 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sendEmailServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 66sm5766848pfu.67 - gsmtp
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.3.jar:2.5.3]
+	at com.hnt.reportautoemail.ReportAutoEmailApplication.main(ReportAutoEmailApplication.java:12) ~[classes/:na]
+Caused by: org.springframework.mail.MailAuthenticationException: Authentication failed; nested exception is javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 66sm5766848pfu.67 - gsmtp
+
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:440) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:361) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:356) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at SendEmailService1Impl.sendingMail(ReportServiceImpl.java:104) ~[classes/:na]
+	at ReportServiceImpl.sendAutoEmail(SendEmailServiceImpl.java:44) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:725) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 16 common frames omitted
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 66sm5766848pfu.67 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:947) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:858) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:762) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at javax.mail.Service.connect(Service.java:342) ~[jakarta.mail-1.6.7.jar:1.6.7]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:518) ~[spring-context-support-5.3.9.jar:5.3.9]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:437) ~[spring-context-support-5.3.9.jar:5.3.9]
+	... 27 common frames omitted
+
+2021-08-14 19:56:08.633  INFO 23832 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 23832 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 19:56:08.637  INFO 23832 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 19:56:09.393  INFO 23832 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void ReportServiceImpl.sendAutoEmail()
+2021-08-14 19:56:09.406  INFO 23832 --- [main] c.h.r.service.SendEmailServiceImpl       : Running Time=2021-08-14
+2021-08-14 19:56:09.444  INFO 23832 --- [main] c.h.r.service.ReportServiceImpl          : Sending with Attached...
+2021-08-14 19:56:10.192 ERROR 23832 --- [main] c.h.r.service.GeneratePdfServiceImpl     : java.io.FileNotFoundException: \report\receipt.jrxml (The system cannot find the path specified)
+2021-08-14 19:56:10.194 ERROR 23832 --- [main] c.h.r.service.ReportServiceImpl          : Error in generating report
+2021-08-14 19:56:15.861  INFO 23832 --- [main] c.h.r.service.ReportServiceImpl          : Mail sent...
+2021-08-14 19:56:16.004  INFO 23832 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 7.928 seconds (JVM running for 9.393)
+2021-08-14 19:58:09.406  INFO 12088 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 12088 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 19:58:09.411  INFO 12088 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 19:58:10.146  INFO 12088 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void ReportServiceImpl.sendAutoEmail()
+2021-08-14 19:58:10.156  INFO 12088 --- [main] c.h.r.service.SendEmailServiceImpl       : Running Time=2021-08-14
+2021-08-14 19:58:10.178  INFO 12088 --- [main] c.h.r.service.ReportServiceImpl          : Sending with Attached...
+2021-08-14 19:58:11.772  WARN 12088 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 19:58:11.773  WARN 12088 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 19:58:11.785  WARN 12088 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 19:58:11.786  WARN 12088 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 19:58:13.816  INFO 12088 --- [main] c.h.r.service.GeneratePdfServiceImpl     : Done generating report
+2021-08-14 19:58:13.816  INFO 12088 --- [main] c.h.r.service.GeneratePdfServiceImpl     : Report successfully generated @path= $reportPath
+2021-08-14 19:58:19.263  INFO 12088 --- [main] c.h.r.service.ReportServiceImpl          : Mail sent...
+2021-08-14 19:58:19.447  INFO 12088 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 10.593 seconds (JVM running for 11.988)
+2021-08-14 22:03:22.105  INFO 18296 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 18296 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 22:03:22.112  INFO 18296 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 22:03:23.017  INFO 18296 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void ReportServiceImpl.sendAutoEmail()
+2021-08-14 22:03:23.031  INFO 18296 --- [main] c.h.r.service.SendEmailServiceImpl       : Running Time=2021-08-14
+2021-08-14 22:03:23.063  INFO 18296 --- [main] c.h.r.service.ReportServiceImpl          : Sending with Attached...
+2021-08-14 22:03:24.672  WARN 18296 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:03:24.673  WARN 18296 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:03:24.690  WARN 18296 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:03:24.692  WARN 18296 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:03:26.358  INFO 18296 --- [main] c.h.r.service.GeneratePdfServiceImpl     : Done generating report
+2021-08-14 22:03:26.359  INFO 18296 --- [main] c.h.r.service.GeneratePdfServiceImpl     : Report successfully generated @path= $reportPath
+2021-08-14 22:03:32.172  INFO 18296 --- [main] c.h.r.service.ReportServiceImpl          : Mail sent...
+2021-08-14 22:03:32.307  INFO 18296 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 10.928 seconds (JVM running for 12.834)
+2021-08-14 22:06:21.986  INFO 2544 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 2544 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 22:06:21.989  INFO 2544 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 22:06:22.895  INFO 2544 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void ReportServiceImpl.sendAutoEmail()
+2021-08-14 22:06:22.906  INFO 2544 --- [main] c.h.r.service.SendEmailServiceImpl       : Running Time=2021-08-14
+2021-08-14 22:06:22.929  INFO 2544 --- [main] c.h.r.service.ReportServiceImpl          : Sending with Attached...
+2021-08-14 22:06:24.358  WARN 2544 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:06:24.359  WARN 2544 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:06:24.376  WARN 2544 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:06:24.376  WARN 2544 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:06:25.629  INFO 2544 --- [main] c.h.r.service.GeneratePdfServiceImpl     : Done generating report
+2021-08-14 22:06:25.629  INFO 2544 --- [main] c.h.r.service.GeneratePdfServiceImpl     : Report successfully generated @path= $reportPath
+2021-08-14 22:06:35.275  INFO 2544 --- [main] c.h.r.service.ReportServiceImpl          : Mail sent...
+2021-08-14 22:06:35.451  INFO 2544 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 14.096 seconds (JVM running for 15.646)
+2021-08-14 22:11:25.391  INFO 8352 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 8352 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 22:11:25.399  INFO 8352 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 22:11:26.391  INFO 8352 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void com.hnt.reportautoemail.service.ReportServiceImpl.sendReport()
+2021-08-14 22:11:26.408  INFO 8352 --- [main] c.h.r.service.ReportServiceImpl          : Running Time=2021-08-14
+2021-08-14 22:11:26.436  INFO 8352 --- [main] c.h.r.service.SendEmailServiceImpl       : Sending with Attached...
+2021-08-14 22:11:28.003  WARN 8352 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:11:28.004  WARN 8352 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:11:28.017  WARN 8352 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:11:28.017  WARN 8352 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:11:29.543  INFO 8352 --- [main] c.h.r.service.GeneratePdfServiceImpl     : Done generating report
+2021-08-14 22:11:29.543  INFO 8352 --- [main] c.h.r.service.GeneratePdfServiceImpl     : Report successfully generated @path= $reportPath
+2021-08-14 22:11:35.126  INFO 8352 --- [main] c.h.r.service.SendEmailServiceImpl       : Mail sent...
+2021-08-14 22:11:35.300  INFO 8352 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 10.61 seconds (JVM running for 12.43)
+2021-08-14 22:15:39.432  INFO 17348 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 17348 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 22:15:39.543  INFO 17348 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 22:15:40.366  INFO 17348 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void com.hnt.reportautoemail.service.ReportServiceImpl.sendReport()
+2021-08-14 22:15:40.377  INFO 17348 --- [main] c.h.r.service.ReportServiceImpl          : Running Time=2021-08-14
+2021-08-14 22:15:40.410  INFO 17348 --- [main] c.h.r.service.SendEmailServiceImpl       : Sending with Attached...
+2021-08-14 22:15:41.815  WARN 17348 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:15:41.815  WARN 17348 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:15:41.827  WARN 17348 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:15:41.828  WARN 17348 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:15:43.290  INFO 17348 --- [main] c.h.r.service.GeneratePdfServiceImpl     : Done generating report
+2021-08-14 22:15:43.290  INFO 17348 --- [main] c.h.r.service.GeneratePdfServiceImpl     : Report successfully generated @path= $reportPath
+2021-08-14 22:15:49.614  INFO 17348 --- [main] c.h.r.service.SendEmailServiceImpl       : Mail sent...
+2021-08-14 22:15:49.787  INFO 17348 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 11.088 seconds (JVM running for 12.903)
+2021-08-14 22:20:15.442  INFO 576 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 576 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 22:20:15.448  INFO 576 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 22:20:16.369  INFO 576 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void com.hnt.reportautoemail.service.ReportServiceImpl.sendReport()
+2021-08-14 22:20:16.388  INFO 576 --- [main] c.h.r.service.ReportServiceImpl          : Running Time=2021-08-14
+2021-08-14 22:20:16.421  INFO 576 --- [main] c.h.r.service.SendEmailServiceImpl       : Sending with Attached...
+2021-08-14 22:20:18.107  WARN 576 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:20:18.107  WARN 576 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:20:18.119  WARN 576 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:20:18.119  WARN 576 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:20:19.686  INFO 576 --- [main] c.h.r.service.GeneratePdfServiceImpl     : Done generating report
+2021-08-14 22:20:19.686  INFO 576 --- [main] c.h.r.service.GeneratePdfServiceImpl     : Report successfully generated @path= $reportPath
+2021-08-14 22:20:26.148  INFO 576 --- [main] c.h.r.service.SendEmailServiceImpl       : Mail sent...
+2021-08-14 22:20:26.335  INFO 576 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 11.703 seconds (JVM running for 13.568)
+2021-08-14 22:23:01.892  INFO 6556 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 6556 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 22:23:01.997  INFO 6556 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 22:23:03.316  INFO 6556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8230 (http)
+2021-08-14 22:23:03.331  INFO 6556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-14 22:23:03.332  INFO 6556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-14 22:23:03.554  INFO 6556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-14 22:23:03.555  INFO 6556 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1486 ms
+2021-08-14 22:23:03.645  INFO 6556 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void com.hnt.reportautoemail.service.ReportServiceImpl.sendReport()
+2021-08-14 22:23:03.657  INFO 6556 --- [main] c.h.r.service.ReportServiceImpl          : Running Time=2021-08-14
+2021-08-14 22:23:03.682  INFO 6556 --- [main] c.h.r.service.SendEmailServiceImpl       : Sending with Attached...
+2021-08-14 22:23:05.289  WARN 6556 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:23:05.290  WARN 6556 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:23:05.308  WARN 6556 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:23:05.308  WARN 6556 --- [main] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:23:06.937  INFO 6556 --- [main] c.h.r.service.GeneratePdfServiceImpl     : Done generating report
+2021-08-14 22:23:06.938  INFO 6556 --- [main] c.h.r.service.GeneratePdfServiceImpl     : Report successfully generated @path= $reportPath
+2021-08-14 22:23:12.095  INFO 6556 --- [main] c.h.r.service.SendEmailServiceImpl       : Mail sent...
+2021-08-14 22:23:12.653  INFO 6556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8230 (http) with context path ''
+2021-08-14 22:23:12.675  INFO 6556 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 12.898 seconds (JVM running for 16.711)
+2021-08-14 22:25:00.964  INFO 8420 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 8420 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 22:25:00.970  INFO 8420 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 22:25:02.485  INFO 8420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8230 (http)
+2021-08-14 22:25:02.503  INFO 8420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-14 22:25:02.504  INFO 8420 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-14 22:25:02.679  INFO 8420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-14 22:25:02.679  INFO 8420 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1631 ms
+2021-08-14 22:25:03.271  INFO 8420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8230 (http) with context path ''
+2021-08-14 22:25:03.302  INFO 8420 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 3.075 seconds (JVM running for 4.734)
+2021-08-14 22:35:54.790  INFO 9468 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 9468 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 22:35:54.795  INFO 9468 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 22:35:55.841  INFO 9468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8230 (http)
+2021-08-14 22:35:55.854  INFO 9468 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-14 22:35:55.854  INFO 9468 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-14 22:35:55.968  INFO 9468 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-14 22:35:55.968  INFO 9468 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1124 ms
+2021-08-14 22:35:56.348  INFO 9468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8230 (http) with context path ''
+2021-08-14 22:35:56.373  INFO 9468 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 2.238 seconds (JVM running for 3.65)
+2021-08-14 22:42:10.882  INFO 1184 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 1184 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 22:42:10.887  INFO 1184 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 22:42:17.899  INFO 12096 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 12096 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 22:42:17.903  INFO 12096 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 22:42:18.983  INFO 12096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8230 (http)
+2021-08-14 22:42:18.994  INFO 12096 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-14 22:42:18.995  INFO 12096 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-14 22:42:19.106  INFO 12096 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-14 22:42:19.106  INFO 12096 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1119 ms
+2021-08-14 22:42:19.487  INFO 12096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8230 (http) with context path ''
+2021-08-14 22:42:19.510  INFO 12096 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 2.232 seconds (JVM running for 3.522)
+2021-08-14 22:43:00.013  INFO 12096 --- [scheduling-1] c.h.r.service.ReportServiceImpl          : Running Time=2021-08-14
+2021-08-14 22:43:00.044  INFO 12096 --- [scheduling-1] c.h.r.service.SendEmailServiceImpl       : Sending with Attached...
+2021-08-14 22:43:01.008  WARN 12096 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:43:01.008  WARN 12096 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:43:01.017  WARN 12096 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:43:01.017  WARN 12096 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:43:01.974  INFO 12096 --- [scheduling-1] c.h.r.service.GeneratePdfServiceImpl     : Done generating report
+2021-08-14 22:43:01.975  INFO 12096 --- [scheduling-1] c.h.r.service.GeneratePdfServiceImpl     : Report successfully generated @path= $reportPath
+2021-08-14 22:43:07.414  INFO 12096 --- [scheduling-1] c.h.r.service.SendEmailServiceImpl       : Mail sent...
+2021-08-14 22:50:21.095  INFO 7340 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 7340 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 22:50:21.201  INFO 7340 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 22:50:23.427  INFO 7340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8230 (http)
+2021-08-14 22:50:23.445  INFO 7340 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-14 22:50:23.446  INFO 7340 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-14 22:50:23.693  INFO 7340 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-14 22:50:23.694  INFO 7340 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2353 ms
+2021-08-14 22:50:24.460  INFO 7340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8230 (http) with context path ''
+2021-08-14 22:50:24.486  INFO 7340 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 4.73 seconds (JVM running for 7.229)
+2021-08-14 22:51:00.011  INFO 7340 --- [scheduling-1] c.h.r.service.ReportService              : Running Time=2021-08-14
+2021-08-14 22:51:00.040  INFO 7340 --- [scheduling-1] c.h.r.service.SendEmailServiceImpl       : Sending with Attached...
+2021-08-14 22:51:01.285  WARN 7340 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:51:01.285  WARN 7340 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:51:01.294  WARN 7340 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:51:01.294  WARN 7340 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:51:02.336  INFO 7340 --- [scheduling-1] c.h.r.service.GeneratePdfServiceImpl     : Done generating report
+2021-08-14 22:51:02.336  INFO 7340 --- [scheduling-1] c.h.r.service.GeneratePdfServiceImpl     : Report successfully generated @path= $reportPath
+2021-08-14 22:51:08.178  INFO 7340 --- [scheduling-1] c.h.r.service.SendEmailServiceImpl       : Mail sent...
+2021-08-14 22:54:28.914  INFO 16120 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 16120 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 22:54:28.916  INFO 16120 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 22:54:29.937  INFO 16120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8230 (http)
+2021-08-14 22:54:29.946  INFO 16120 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-14 22:54:29.947  INFO 16120 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-14 22:54:30.057  INFO 16120 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-14 22:54:30.058  INFO 16120 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1085 ms
+2021-08-14 22:54:30.445  INFO 16120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8230 (http) with context path ''
+2021-08-14 22:54:30.472  INFO 16120 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 2.075 seconds (JVM running for 3.285)
+2021-08-14 22:55:00.019  INFO 16120 --- [scheduling-1] c.h.r.service.ReportService              : Running Time=2021-08-14
+2021-08-14 22:55:00.046  INFO 16120 --- [scheduling-1] c.h.r.service.SendEmailServiceImpl       : Sending with Attached...
+2021-08-14 22:55:01.920  WARN 16120 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:55:01.920  WARN 16120 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:55:01.932  WARN 16120 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 22:55:01.933  WARN 16120 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 22:55:03.321  INFO 16120 --- [scheduling-1] c.h.r.service.GeneratePdfServiceImpl     : Done generating report
+2021-08-14 22:55:08.765  INFO 16120 --- [scheduling-1] c.h.r.service.SendEmailServiceImpl       : Mail sent...
+2021-08-14 23:01:55.876  INFO 18552 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 18552 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 23:01:55.983  INFO 18552 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 23:01:56.992  INFO 18552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8230 (http)
+2021-08-14 23:01:57.002  INFO 18552 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-14 23:01:57.003  INFO 18552 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-14 23:01:57.111  INFO 18552 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-14 23:01:57.111  INFO 18552 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1061 ms
+2021-08-14 23:01:57.518  INFO 18552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8230 (http) with context path ''
+2021-08-14 23:01:57.540  INFO 18552 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 2.248 seconds (JVM running for 3.549)
+2021-08-14 23:02:00.017  INFO 18552 --- [scheduling-1] c.h.r.service.ReportService              : Running Time=2021-08-14
+2021-08-14 23:02:00.047  INFO 18552 --- [scheduling-1] c.h.r.service.SendEmailServiceImpl       : Sending with Attached...
+2021-08-14 23:02:01.137  WARN 18552 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 23:02:01.138  WARN 18552 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 23:02:01.146  WARN 18552 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 23:02:01.146  WARN 18552 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 23:02:02.115  INFO 18552 --- [scheduling-1] c.h.r.service.GeneratePdfServiceImpl     : Done generating report
+2021-08-14 23:02:58.705  INFO 18552 --- [scheduling-1] c.h.r.service.SendEmailServiceImpl       : Mail sent...
+2021-08-14 23:10:02.410  INFO 12532 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 12532 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 23:10:02.416  INFO 12532 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 23:10:03.888  INFO 12532 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8230 (http)
+2021-08-14 23:10:03.901  INFO 12532 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-14 23:10:03.901  INFO 12532 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-14 23:10:04.122  INFO 12532 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-14 23:10:04.122  INFO 12532 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1621 ms
+2021-08-14 23:10:04.876  INFO 12532 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8230 (http) with context path ''
+2021-08-14 23:10:04.920  INFO 12532 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 3.243 seconds (JVM running for 4.958)
+2021-08-14 23:10:34.902  INFO 10520 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 10520 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 23:10:34.907  INFO 10520 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 23:10:36.233  INFO 10520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8230 (http)
+2021-08-14 23:10:36.246  INFO 10520 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-14 23:10:36.246  INFO 10520 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-14 23:10:36.414  INFO 10520 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-14 23:10:36.414  INFO 10520 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1423 ms
+2021-08-14 23:10:36.991  INFO 10520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8230 (http) with context path ''
+2021-08-14 23:10:37.033  INFO 10520 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 2.813 seconds (JVM running for 4.516)
+2021-08-14 23:11:00.015  INFO 10520 --- [scheduling-1] c.h.r.service.ReportService              : Running Time=2021-08-14
+2021-08-14 23:11:00.059  INFO 10520 --- [scheduling-1] c.h.r.service.SendEmailServiceImpl       : Sending with Attached...
+2021-08-14 23:11:01.752  WARN 10520 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 23:11:01.752  WARN 10520 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 23:11:01.764  WARN 10520 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 23:11:01.764  WARN 10520 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 23:11:03.101  INFO 10520 --- [scheduling-1] c.h.r.service.GeneratePdfServiceImpl     : Done generating report
+2021-08-14 23:11:57.872  INFO 10520 --- [scheduling-1] c.h.r.service.SendEmailServiceImpl       : Mail sent...
+2021-08-14 23:16:18.465  INFO 11008 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 11008 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 23:16:18.472  INFO 11008 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 23:16:19.893  INFO 11008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8230 (http)
+2021-08-14 23:16:19.905  INFO 11008 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-14 23:16:19.906  INFO 11008 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-14 23:16:20.150  INFO 11008 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-14 23:16:20.150  INFO 11008 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1578 ms
+2021-08-14 23:16:20.823  INFO 11008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8230 (http) with context path ''
+2021-08-14 23:16:20.854  INFO 11008 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 3.1 seconds (JVM running for 4.718)
+2021-08-14 23:17:00.018  INFO 11008 --- [scheduling-1] c.h.r.service.ReportService              : Running Time=2021-08-14
+2021-08-14 23:17:00.075  INFO 11008 --- [scheduling-1] c.h.r.service.SendEmailServiceImpl       : Sending with Attached...
+2021-08-14 23:17:01.392  WARN 11008 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 23:17:01.393  WARN 11008 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 23:17:01.405  WARN 11008 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 23:17:01.405  WARN 11008 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 23:17:02.574  INFO 11008 --- [scheduling-1] c.h.r.service.GeneratePdfServiceImpl     : Done generating report
+2021-08-14 23:17:02.583 ERROR 11008 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.ClassCastException: class java.io.BufferedInputStream cannot be cast to class [B (java.io.BufferedInputStream and [B are in module java.base of loader 'bootstrap')
+	at com.hnt.reportautoemail.service.SendEmailServiceImpl.sendingMail(SendEmailServiceImpl.java:96) ~[classes/:na]
+	at com.hnt.reportautoemail.service.ReportService.sendReport(ReportService.java:38) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95) ~[spring-context-5.3.9.jar:5.3.9]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+2021-08-14 23:21:39.064  INFO 18764 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 18764 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 23:21:39.068  INFO 18764 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 23:21:40.450  INFO 18764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8230 (http)
+2021-08-14 23:21:40.462  INFO 18764 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-14 23:21:40.463  INFO 18764 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-14 23:21:40.610  INFO 18764 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-14 23:21:40.610  INFO 18764 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1465 ms
+2021-08-14 23:21:41.201  INFO 18764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8230 (http) with context path ''
+2021-08-14 23:21:41.230  INFO 18764 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 2.894 seconds (JVM running for 4.452)
+2021-08-14 23:22:00.012  INFO 18764 --- [scheduling-1] c.h.r.service.ReportService              : Running Time=2021-08-14
+2021-08-14 23:22:00.052  INFO 18764 --- [scheduling-1] c.h.r.service.SendEmailServiceImpl       : Sending with Attached...
+2021-08-14 23:22:01.371  WARN 18764 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 23:22:01.372  WARN 18764 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 23:22:01.383  WARN 18764 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 23:22:01.384  WARN 18764 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 23:22:02.500  INFO 18764 --- [scheduling-1] c.h.r.service.GeneratePdfServiceImpl     : Done generating report
+2021-08-14 23:22:08.033  INFO 18764 --- [scheduling-1] c.h.r.service.SendEmailServiceImpl       : Mail sent...
+2021-08-14 23:24:09.038  INFO 17436 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 17436 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 23:24:09.045  INFO 17436 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 23:24:16.701  INFO 13504 --- [main] c.h.r.ReportAutoEmailApplication         : Starting ReportAutoEmailApplication using Java 11.0.9 on DESKTOP-J47OLBU with PID 13504 (D:\JDC\workspace\mmcare\report-auto-email\target\classes started by Hsu Nyeint Thu in D:\JDC\workspace\mmcare\report-auto-email)
+2021-08-14 23:24:16.705  INFO 13504 --- [main] c.h.r.ReportAutoEmailApplication         : No active profile set, falling back to default profiles: default
+2021-08-14 23:24:18.144  INFO 13504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8230 (http)
+2021-08-14 23:24:18.156  INFO 13504 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-14 23:24:18.157  INFO 13504 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2021-08-14 23:24:18.338  INFO 13504 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-14 23:24:18.339  INFO 13504 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1531 ms
+2021-08-14 23:24:18.890  INFO 13504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8230 (http) with context path ''
+2021-08-14 23:24:18.919  INFO 13504 --- [main] c.h.r.ReportAutoEmailApplication         : Started ReportAutoEmailApplication in 2.913 seconds (JVM running for 4.545)
+2021-08-14 23:25:00.009  INFO 13504 --- [scheduling-1] c.h.r.service.ReportService              : Running Time=2021-08-14
+2021-08-14 23:25:00.060  INFO 13504 --- [scheduling-1] c.h.r.service.SendEmailServiceImpl       : Sending with Attached...
+2021-08-14 23:25:01.329  WARN 13504 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 23:25:01.329  WARN 13504 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 23:25:01.340  WARN 13504 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'stretchType' attribute in <graphicElement> tag is deprecated. Use the same attribut in <reportElement> tag instead.
+2021-08-14 23:25:01.341  WARN 13504 --- [scheduling-1] n.s.j.e.xml.JRGraphicElementFactory      : The 'pen' attribute is deprecated. Use the <pen> tag instead.
+2021-08-14 23:25:02.755  INFO 13504 --- [scheduling-1] c.h.r.service.GeneratePdfServiceImpl     : Done generating report
+2021-08-14 23:25:09.031  INFO 13504 --- [scheduling-1] c.h.r.service.SendEmailServiceImpl       : Mail sent...
